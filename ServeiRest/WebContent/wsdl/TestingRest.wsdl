@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ServeiRest.org" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ServeiRest.org" xmlns:intf="http://ServeiRest.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ServeiRest.org" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="esborraDada">
+    <complexType>
+     <sequence>
+      <element name="idd" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="esborraDadaResponse">
+    <complexType>
+     <sequence>
+      <element name="esborraDadaReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actualitzaDada">
+    <complexType>
+     <sequence>
+      <element name="idd" type="xsd:string"/>
+      <element name="nomm" type="xsd:string"/>
+      <element name="cognomm" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="actualitzaDadaResponse">
+    <complexType>
+     <sequence>
+      <element name="actualitzaDadaReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="creaNovaDada">
+    <complexType>
+     <sequence>
+      <element name="idd" type="xsd:string"/>
+      <element name="nomm" type="xsd:string"/>
+      <element name="cognomm" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="creaNovaDadaResponse">
+    <complexType>
+     <sequence>
+      <element name="creaNovaDadaReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="donemDades">
+    <complexType/>
+   </element>
+   <element name="donemDadesResponse">
+    <complexType>
+     <sequence>
+      <element name="donemDadesReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="donemDadesAmbParametres">
+    <complexType>
+     <sequence>
+      <element name="idd" type="xsd:string"/>
+      <element name="nomm" type="xsd:string"/>
+      <element name="cognomm" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="donemDadesAmbParametresResponse">
+    <complexType>
+     <sequence>
+      <element name="donemDadesAmbParametresReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="donemDadesAmbParametresRequest">
+
+      <wsdl:part element="impl:donemDadesAmbParametres" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="donemDadesRequest">
+
+      <wsdl:part element="impl:donemDades" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="donemDadesResponse">
+
+      <wsdl:part element="impl:donemDadesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="esborraDadaRequest">
+
+      <wsdl:part element="impl:esborraDada" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="creaNovaDadaRequest">
+
+      <wsdl:part element="impl:creaNovaDada" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="donemDadesAmbParametresResponse">
+
+      <wsdl:part element="impl:donemDadesAmbParametresResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="actualitzaDadaResponse">
+
+      <wsdl:part element="impl:actualitzaDadaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="creaNovaDadaResponse">
+
+      <wsdl:part element="impl:creaNovaDadaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="esborraDadaResponse">
+
+      <wsdl:part element="impl:esborraDadaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="actualitzaDadaRequest">
+
+      <wsdl:part element="impl:actualitzaDada" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TestingRest">
+
+      <wsdl:operation name="esborraDada">
+
+         <wsdl:input message="impl:esborraDadaRequest" name="esborraDadaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:esborraDadaResponse" name="esborraDadaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="actualitzaDada">
+
+         <wsdl:input message="impl:actualitzaDadaRequest" name="actualitzaDadaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:actualitzaDadaResponse" name="actualitzaDadaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="creaNovaDada">
+
+         <wsdl:input message="impl:creaNovaDadaRequest" name="creaNovaDadaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:creaNovaDadaResponse" name="creaNovaDadaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="donemDades">
+
+         <wsdl:input message="impl:donemDadesRequest" name="donemDadesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:donemDadesResponse" name="donemDadesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="donemDadesAmbParametres">
+
+         <wsdl:input message="impl:donemDadesAmbParametresRequest" name="donemDadesAmbParametresRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:donemDadesAmbParametresResponse" name="donemDadesAmbParametresResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TestingRestSoapBinding" type="impl:TestingRest">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="esborraDada">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="esborraDadaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="esborraDadaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="actualitzaDada">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="actualitzaDadaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="actualitzaDadaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="creaNovaDada">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="creaNovaDadaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="creaNovaDadaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="donemDades">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="donemDadesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="donemDadesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="donemDadesAmbParametres">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="donemDadesAmbParametresRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="donemDadesAmbParametresResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TestingRestService">
+
+      <wsdl:port binding="impl:TestingRestSoapBinding" name="TestingRest">
+
+         <wsdlsoap:address location="http://localhost:8080/ServeiRest/services/TestingRest"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
